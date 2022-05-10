@@ -9,10 +9,13 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
-
-    <h2>{{ $book->title }}</h2>
-    <h5>{{ $book->author }}</h5>
-    <p>{{ $book->year }}</p>
-
+    <a href="{{ route('home') }}">Torna indietro &#8630;</a>
+    <div class="container">
+        <div class="card">
+            <h2>{{ $book->title }}</h2>
+            <h5>{{ $book->author }}</h5>
+            <p>{{ $book->year }}</p>
+        </div>
+    </div>
 </body>
 </html>
