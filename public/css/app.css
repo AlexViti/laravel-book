@@ -22,8 +22,13 @@ button {
   cursor: pointer;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   height: 100%;
+  padding-top: 5rem;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   color: #000000;
   -webkit-font-smoothing: antialiased;
@@ -62,15 +67,24 @@ body {
 
 .container {
   max-width: 800px;
-  margin: 15% auto;
+  margin: auto;
   background-color: white;
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   padding: 2rem;
+  flex-wrap: wrap;
   border: 5px solid black;
 }
 
-.container h1 {
+.container .card {
+  width: calc((100% - 4rem) / 3);
+}
+
+.container h2 {
   color: red;
+}
+
+.container:hover {
+  transform: scale(1);
 }
 
