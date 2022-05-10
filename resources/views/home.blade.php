@@ -7,8 +7,11 @@
     <title> </title>
 </head>
 <body>
-    @foreach ($books as $book)
-        <h1>{{ $book->title }}</h1>
-    @endforeach
+    <div class="card">
+        @foreach ($books as $book)
+            <h1>{{ $book->title }}</h1>
+            <h2>{{ $book->author }}</h2>
+        @endforeach
+    </div>
 </body>
 </html>
