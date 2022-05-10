@@ -9,7 +9,7 @@
 <body>
     <div class="card">
         @foreach ($books as $book)
-            <h1>{{ $book->title }}</h1>
+            <h1><a href="{{ route('books.show', $book->id) }}">{{ $book->title }}</a></h1>
             <h2>{{ $book->author }}</h2>
         @endforeach
     </div>
