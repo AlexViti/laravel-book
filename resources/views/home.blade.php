@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> </title>
 
-    <link rel="stylesheet" href="{{ assets('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
 </head>
 <body>
     <div class="container">
@@ -14,7 +15,7 @@
             <div class="card">
                 <h2>{{ $book->title }}</h2>
                 <strong>{{ $book->author }}</strong>
-                <div>{{ date('d/m/Y', $book->year) }}</div>
+                <div>{{ date('d/m/Y', strtotime($book->year)) }}</div>
             </div>
         @endforeach
     </div>
