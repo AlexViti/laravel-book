@@ -16,6 +16,7 @@
                 <h2>{{ $book->title }}</h2>
                 <strong>{{ $book->author }}</strong>
                 <div>{{ date('d/m/Y', strtotime($book->year)) }}</div>
+                <a href="{{ route('books.show', $book->id) }}">Apri libro</a>
             </div>
         @endforeach
     </div>
