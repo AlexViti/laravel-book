@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> </title>
+
+    <link rel="stylesheet" href="{{ assets('css/app.css') }}">
 </head>
 <body>
-    <div class="card">
+    <div class="container">
         @foreach ($books as $book)
-            <h1>{{ $book->title }}</h1>
-            <h2>{{ $book->author }}</h2>
+            <div class="card">
+                <h2>{{ $book->title }}</h2>
+                <strong>{{ $book->author }}</strong>
+                <div>{{ date('d/m/Y', $book->year) }}</div>
+            </div>
         @endforeach
     </div>
 </body>
