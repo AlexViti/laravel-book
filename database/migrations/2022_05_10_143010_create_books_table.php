@@ -14,7 +14,10 @@ class CreateBooksTable extends Migration
     public function up()
     {
         Schema::create('books', function (Blueprint $table) {
-            $table->id();
+            $table->id()->unique();
+            $table->string('title', 100);
+            $table->string('author', 100);
+            $table->date('year')->nullable();
             $table->timestamps();
         });
     }
